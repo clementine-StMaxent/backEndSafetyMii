@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outDir": "./build",
+        "target": "es5",
+        "lib": ["dom","dom.iterable","esnext"],
+        "allowJs": true,
+        "checkJs": true,
+        "skipLibCheck": false,
+        "noImplicitAny": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node"
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules","webpack.*.js","*.js"]
+}
