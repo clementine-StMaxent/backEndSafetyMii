@@ -6,9 +6,9 @@ class DemoController {
         res.send("Hello")
     }
 
-    test = (req,res) => {
-        res.send("Test")
-    }
+    // test = (req,res) => {
+    //     res.send("Test")
+    // }
 
     demo(req,res){
         res.send("Demo")

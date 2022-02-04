@@ -9,7 +9,7 @@ export const routing = (app) => {
     // Demo
     app.get('/', demoController.demo)
     app.get('/hello', demoController.hello)
-    app.get('/test', demoController.test)
+    // app.get('/test', demoController.test)
     app.post('/', demoController.save)
 
     // User
