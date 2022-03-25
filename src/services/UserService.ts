@@ -1,5 +1,6 @@
 import { userRepository } from "../repositories/UserRepository";
 import { secourService } from '../services/secourService'
+
 class UserService {
 
     save(user){

@@ -23,6 +23,7 @@ class SecourController {
         })
     }
 
+
     deleteById(req, res){
         secourService.deleteById(req.params.id).then(ok=>{
             res.send("OK")
