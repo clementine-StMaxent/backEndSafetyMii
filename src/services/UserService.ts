@@ -24,6 +24,11 @@ class UserService {
         return userRepository.findByUsername(username)
     }
 
+    findByMail(email){
+        return userRepository.findByMail(email)
+    }
+
+
     async findSecour(id){
         const user = await userRepository.findById(id)
         console.log(user)

@@ -38,6 +38,13 @@ class UserController {
         })
     }
 
+    findByMail(req, res){
+        const email = req.params.email
+        userService.findByMail(email).then(data => {
+            res.json(data)
+        })
+    }
+
     findSecour(req, res){
         userService.findSecour(req.params.id).then(data => {
             res.json(data)

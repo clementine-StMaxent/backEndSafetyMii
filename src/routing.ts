@@ -4,7 +4,6 @@ import { santeController } from "./controllers/SanteController"
 import { procheController } from "./controllers/ProcheController"
 import { Auth } from "./controllers/auth";
 import bodyParser from "body-parser";
-import swaggerUi = require('swagger-ui-express');
 
 // @ts-ignore
 export const routing = (app) => {

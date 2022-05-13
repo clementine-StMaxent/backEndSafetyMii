@@ -1,15 +1,25 @@
-import mongoose from "mongoose";
+import mongoose, { Model, model, Schema,Document } from "mongoose"
 
-const userSchema = new mongoose.Schema({
+export interface User extends Document{
     nom:String,
     prenom:String,
     email:String,
     password:String,
     createdAt:Date,
+    secourId:String,
+    __v:number
+}
+
+export const userSchema = new mongoose.Schema({
+    nom:String,
+    prenom:String,
+    email:{type:String,unique:true,required:true},
+    password:String,
+    createdAt:Date,
     secourId:String
 })
 
-const userModel = mongoose.model('user',userSchema)
+export const userModel:Model<User> = model('user',userSchema)
 
 class UserRepository {
     save(user){
@@ -30,6 +40,10 @@ class UserRepository {
 
     findByUsername(username){
         return userModel.find({username:username}).exec()
+    }
+
+    findByMail(email){
+        return userModel.find({email:email}).exec()
     }
 }
 
